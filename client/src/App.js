@@ -1,40 +1,24 @@
-import React, { useState } from 'react'
-import axios from "axios"
-import Display from './Display';
+import React from "react";
+import axios from "axios";
+import Display from "./Display";
+import Home from "./components/Home";
+import Rating from "./components/Rating";
 const App = () => {
-  const [data, setData] = useState({description:"",rating:"",barCode:""});
-  
-  const onChange= (e)=>
-  {
-    setData({ ...data, [e.target.name]: e.target.value });
-  }
-  const onSubmit= (e)=>
-  {
-    e.preventDefault();    
-    axios.post("/rating",data);
-  }
   return (
-    <div className="container">
-    <div className="m-3 mt-5">
-    <Display />
+    <div
+      style={{
+        background: "100%",
+        backgroundRepeat: "no-repeat",
+        width: "100%",
+        height: "115vh",
+        backgroundImage: `url(https://images.unsplash.com/photo-1611250503393-9424f314d265?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2166&q=80)`,
+      }}
+    >
+      <div className="container">
+        <Home />
+      </div>
     </div>
-    <form className="row " onSubmit={onSubmit}>
-    <div className="row-auto m-3">
-    <input type="text" onChange={onChange}  value={data.barCode} name="barCode" className="form-control" id="inputPassword2" placeholder="Enter BarCode" />
-  </div>
-  <div className="row-auto m-3">
+  );
+};
 
-    <input className="form-control form-control-lg" onChange={onChange} value={data.description} type="text"  placeholder="Enter Description" name="description"  />
-  </div>
-  <div className="row-auto m-3">
-    <input type="text" onChange={onChange}  value={data.rating} name="rating" className="form-control" id="inputPassword2" placeholder="Enter Rting" />
-  </div>
-  <div className="col-auto m-3">
-    <button type="submit" className="btn btn-primary mb-3">Rate</button>
-  </div>
-</form>
-    </div>
-  )
-}
-
-export default App
+export default App;

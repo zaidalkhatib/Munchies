@@ -45,7 +45,7 @@ const Info = ({ data }) => {
           <ProgressBar data={data.items[0].fat_total_g} name="Fat" max="30" />
           <div class="ui clearing divider"></div>
           <ProgressBar data={data.items[0].sugar_g} name="Suger" max="100" />
-          <button class="fluid ui blue button">Check People Comments</button>
+          <button class="fluid ui blue button">Check People Reviews</button>
         </div>
       </div>
     </div>

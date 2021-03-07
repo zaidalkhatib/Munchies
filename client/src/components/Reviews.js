@@ -14,7 +14,7 @@ const Reviews = (props) => {
     const res = await axios.get(`/reviews/${name}`);
     setData(res.data);
     console.log(res);
-  }, []);
+  }, [data]);
   const HomeBackClick = () => {
     history.push("/");
   };
@@ -28,7 +28,6 @@ const Reviews = (props) => {
 
   const onClick = async (e) => {
     e.preventDefault();
-    console.log(input);
 
     if (input.review !== "" && input.rating !== "") {
       const res = await axios.post(`/reviews/${name}`, input);

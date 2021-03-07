@@ -22,7 +22,6 @@ const SeachBar = (props) => {
       // const res = await axios.get(
       //   `https://api.barcodelookup.com/v2/products?search=${input}&key=dbme21e92s95hb0050jqegagu4u24i`
       // );
-
       const res = await axios.get(
         `https://api.calorieninjas.com/v1/nutrition?query=${input}`,
         {
@@ -33,6 +32,7 @@ const SeachBar = (props) => {
       );
       setData(res);
       setClicked(true);
+      setInput("");
     } else {
       error();
     }

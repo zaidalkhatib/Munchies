@@ -30,6 +30,7 @@ const Reviews = (props) => {
     if (input.review !== "" && input.rating !== "") {
       const res = await axios.post(`/reviews/${name}`, input);
       success();
+      setInput({ [e.target.name]: "" });
     } else {
       error();
     }

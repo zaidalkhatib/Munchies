@@ -5,13 +5,11 @@
 </p>
 <h1>How to Run the backEND?</h1>
 <br />
-
 <li>npm install</li> 
 <li>npm start</li> 
 <br />
 <h1>How to Run the frontend?</h1>
 <ul> 
-<li>Clone the repo</li> 
 <li>cd client</li> 
 <li>npm install</li> 
 <li>npm start</li> 

@@ -23,7 +23,9 @@ app.post("/reviews/:name", (req, res) => {
     }
   });
 });
-
+setInterval(function () {
+  db.query("SELECT 1");
+}, 5000);
 app.get("/reviews/:name", (req, res) => {
   const name = req.params.name;
   let getSql = `SELECT * FROM comments where name="${name}"`;

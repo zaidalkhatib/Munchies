@@ -1,5 +1,5 @@
 # Munchies
-<h1>What's this App?</h1>
+<h1>What's this Munchies?</h1>
 <br/>
 <p>This program is a simulation of a snack rating system. A user can search for a snack, look for certain macros, and give an overall rating for the snack
 </p>

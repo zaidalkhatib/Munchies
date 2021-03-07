@@ -7,7 +7,7 @@ const MostItems = ({ name, image }) => {
       <div class="ui large feed">
         <div class="event">
           <div class="label">
-            <img src={image} />
+            <img src={image} alt="photo" />
           </div>
           <div class="content">
             <div class="summary">

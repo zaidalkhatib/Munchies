@@ -1,20 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import "semantic-ui-css/semantic.min.css";
 import MoustUsed from "./MoustUsed";
-import ProgressBar from "./ProgressBar";
 import SeachBar from "./SeachBar";
 
 const Home = () => {
-  const date = new Date();
-
   return (
     <div>
       <div className="container ">
         <div>
-          <h2 style={{ textAlign: "center" }} className="">
+          <h2 style={{ textAlign: "center", color: "white" }}>
             <h1>
               <i class="heart blue icon mt-5"></i>
-              Mubchies
+              Munchies
               <div class="sub header" style={{ color: "#ffffff" }}>
                 Get Nutrition Facts Now Free nutrition data for all the snacks
                 and beverages you love.

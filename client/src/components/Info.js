@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
+import Comments from "./Comments";
 import ProgressBar from "./ProgressBar";
-
 const Info = ({ data }) => {
   console.log(data.items[0], "dasdsa");
   if (data.items[0] === undefined) {
@@ -45,7 +45,7 @@ const Info = ({ data }) => {
           <ProgressBar data={data.items[0].fat_total_g} name="Fat" max="30" />
           <div class="ui clearing divider"></div>
           <ProgressBar data={data.items[0].sugar_g} name="Suger" max="100" />
-          <button class="fluid ui blue button">Check People Reviews</button>
+          <Comments name={data.items[0].name} />
         </div>
       </div>
     </div>

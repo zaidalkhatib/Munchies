@@ -6,8 +6,8 @@ import patch from "../images/p.jpg";
 
 const MoustUsed = () => {
   return (
-    <div>
-      <div class="ui segment">
+    <div style={{ paddingBottom: "20px" }}>
+      <div class="ui segment" style={{ marginTop: "20px" }}>
         <h2 class="ui  header">Most Searched</h2>
         <MostItems name="Oreo" image={oreo} />
         <MostItems name="Snickers" image={snickers} />

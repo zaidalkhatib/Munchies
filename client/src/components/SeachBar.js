@@ -7,7 +7,7 @@ toast.configure();
 
 const SeachBar = (props) => {
   const [input, setInput] = useState("");
-  const [name, setName] = useState("");
+  // const [name, setName] = useState("");
   const [data, setData] = useState([]);
   const [clicked, setClicked] = useState(false);
 

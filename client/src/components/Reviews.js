@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 toast.configure();
 const Reviews = (props) => {
   const [data, setData] = useState([]);
-  const [input, setInput] = useState({ review: "", rating: "" });
+  const [input, setInput] = useState({ review: "", rating: "5" });
 
   const name = props.match.params.id;
   const history = useHistory();
@@ -20,6 +20,7 @@ const Reviews = (props) => {
   };
   const onChange = (e) => {
     setInput({ ...input, [e.target.name]: e.target.value });
+    console.log(input);
   };
   const error = () => toast("Please Enter Your Review!", { type: "error" });
   const success = () =>
@@ -27,6 +28,8 @@ const Reviews = (props) => {
 
   const onClick = async (e) => {
     e.preventDefault();
+    console.log(input);
+
     if (input.review !== "" && input.rating !== "") {
       const res = await axios.post(`/reviews/${name}`, input);
       success();
@@ -53,22 +56,35 @@ const Reviews = (props) => {
               value={input.review}
             ></textarea>
           </div>
+
           <div style={{ marginBottom: "10px" }}>
-            <div class="ui corner labeled input">
-              <input
-                type="number"
-                placeholder="Rating"
-                value={input.rating}
-                name="rating"
-                onChange={onChange}
-              />
-              <div class="ui corner label">
-                <i class="star icon"></i>
-              </div>
+            <label
+              style={{ color: "white", fontWeight: "bolder", fontSize: "18px" }}
+            >
+              Rating
+            </label>
+            <br />
+            <select
+              value={input.rating}
+              name="rating"
+              onChange={onChange}
+              style={{ width: "100px" }}
+              class="ui compact selection dropdown"
+            >
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option selected value="5">
+                5
+              </option>
+            </select>
+            <div class="ui corner label">
+              <i class="star icon"></i>
             </div>
           </div>
           <button onClick={onClick} class="ui blue labeled submit icon button">
-            <i class="icon edit"></i> Add Reply
+            <i class="icon edit"></i> Add Review
           </button>
         </form>
         <button

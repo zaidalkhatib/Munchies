@@ -47,8 +47,12 @@ const SeachBar = (props) => {
           placeholder="Enter What You Are Looking For"
           required={true}
         />
-        <button style={{ border: "0px", backgroundColor: "white" }}>
-          <i onClick={onClick} class="search icon"></i>{" "}
+        <button
+          onClick={onClick}
+          style={{ border: "0px" }}
+          className=" ui primary button"
+        >
+          Search
         </button>
       </div>
       {clicked ? (

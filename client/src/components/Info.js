@@ -44,7 +44,7 @@ const Info = ({ data }) => {
           <div class="ui clearing divider"></div>
           <ProgressBar data={data.items[0].fat_total_g} name="Fat" max="30" />
           <div class="ui clearing divider"></div>
-          <ProgressBar data={data.items[0].sugar_g} name="Suger" max="100" />
+          <ProgressBar data={data.items[0].sugar_g} name="Sugar" max="100" />
           <Comments name={data.items[0].name} />
         </div>
       </div>
